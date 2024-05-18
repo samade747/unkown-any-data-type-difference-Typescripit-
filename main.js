@@ -13,11 +13,22 @@
 //     console.log(guest);
 // }
 // invite("samad", "ali", "khan");
-function invite(host) {
+// // if we print the rest parameters only host will be printed
+// function invite(host:string, ...guest: string[] ) {
+//     console.log(`$host`);
+// }
+// invite("samad", "ali", "khan");
+// if we print the rest parameters only guest will be printed
+// function invite(host:string, ...guest: string[] ) {
+//     console.log(`$guest`);
+// }
+// invite("samad", "ali", "khan");
+// if we print the rest parameters only guest will be printed
+function invite() {
     var guest = [];
-    for (var _i = 1; _i < arguments.length; _i++) {
-        guest[_i - 1] = arguments[_i];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        guest[_i] = arguments[_i];
     }
-    console.log("$host");
+    console.log("".concat(guest));
 }
 invite("samad", "ali", "khan");

@@ -34,11 +34,18 @@
 // invite("samad", "ali", "khan");
 
 // if we print the rest parameters only guest will be printed
-function invite(host:string, ...guest: string[] ) {
-    console.log(`$guest`);
+// function invite(host:string, ...guest: string[] ) {
+//     console.log(`$guest`);
+// }
+
+
+// invite("samad", "ali", "khan");
+
+
+// if we want to join 
+function invite(...guest: string[] ) {
+    console.log(guest.join("|"));
 }
 
 
 invite("samad", "ali", "khan");
-
-

@@ -43,9 +43,27 @@
 
 
 // if we want to join 
-function invite(...guest: string[] ) {
-    console.log(guest.join("|"));
-}
+// function invite(...guest: string[] ) {
+//     console.log(guest.join("|"));
+// }
 
 
-invite("samad", "ali", "khan");
+// invite("samad", "ali", "khan");
+
+// function overloads
+// if we create function overloads it must be same name of function 
+    function add(arg1 : string, arg2: string): number;
+    function add(arg1 : number, arg2: number): number;
+    function add(arg1 : boolean, arg2: boolean): boolean;
+
+
+    function add(arg1 : any, arg2: any): any {
+        return arg1 + arg2;
+    }
+
+
+    console.log(add(1, 2));
+    console.log(add("1", "2"));
+    console.log(add(true, false));
+
+    

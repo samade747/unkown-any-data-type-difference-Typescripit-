@@ -52,18 +52,18 @@
 
 // function overloads
 // if we create function overloads it must be same name of function 
-    function add(arg1 : string, arg2: string): number;
-    function add(arg1 : number, arg2: number): number;
-    function add(arg1 : boolean, arg2: boolean): boolean;
+    function add(arg1 : string, arg2: string): number; // its type is string 
+    function add(arg1 : number, arg2: number): number; // its type is number
+    function add(arg1 : boolean, arg2: boolean): boolean; // its type is boolean
+    function add(arg1 : any, arg2: any): boolean; // its type is boolean
 
-
-    function add(arg1 : any, arg2: any): any {
-        return arg1 + arg2;
+    function add(arg1 : any, arg2: any): any { // function add with any type
+        return arg1 + arg2; // return type is any
     }
 
+    console.log(add("1", "2")); // return type is number
+    console.log(add(1, 2)); // return type is number
+    console.log(add(true, false)); // return type is boolean
+    console.log(add("22", 54)); // return type is boolean
 
-    console.log(add(1, 2));
-    console.log(add("1", "2"));
-    console.log(add(true, false));
 
-    
